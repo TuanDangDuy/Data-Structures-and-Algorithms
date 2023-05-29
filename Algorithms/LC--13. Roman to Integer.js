@@ -68,8 +68,8 @@ const romanToInt2 = (s) => {
     return result
 }
 
-console.log(romanToInt1("III"));      
-console.log(romanToInt1("IV"));       
-console.log(romanToInt1("IX"));       
-console.log(romanToInt1("LVIII"));   
-console.log(romanToInt1("MCMXCIV")); 
+console.log(romanToInt2("III"));      
+console.log(romanToInt2("IV"));       
+console.log(romanToInt2("IX"));       
+console.log(romanToInt2("LVIII"));   
+console.log(romanToInt2("MCMXCIV")); 
