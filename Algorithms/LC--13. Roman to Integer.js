@@ -1,4 +1,5 @@
-const romanToInt = (s) => {
+//Solution 1
+const romanToInt1 = (s) => {
     const romanMap = {
         'I': 1,
         'V': 5,
@@ -28,8 +29,47 @@ const romanToInt = (s) => {
     return result
 }
 
-console.log(romanToInt("III"));      // Output: 3
-console.log(romanToInt("IV"));       // Output: 4
-console.log(romanToInt("IX"));       // Output: 9
-console.log(romanToInt("LVIII"));    // Output: 58
-console.log(romanToInt("MCMXCIV"));  // Output: 1994
+console.log(romanToInt1("III"));      
+console.log(romanToInt1("IV"));       
+console.log(romanToInt1("IX"));       
+console.log(romanToInt1("LVIII"));   
+console.log(romanToInt1("MCMXCIV"));  
+
+
+
+
+
+
+//Solution 2
+const romanToInt2 = (s) => {
+    const romanMap = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+
+    let result = 0
+
+    for(let i = 0; i < s.length; i++) {
+        const current = romanMap[s[i]]
+        const next = romanMap[s[i + 1]]
+
+        if(next && current < next) {
+            result -= current
+        } else {
+            result += current
+        }
+    }
+
+    return result
+}
+
+console.log(romanToInt1("III"));      
+console.log(romanToInt1("IV"));       
+console.log(romanToInt1("IX"));       
+console.log(romanToInt1("LVIII"));   
+console.log(romanToInt1("MCMXCIV")); 
